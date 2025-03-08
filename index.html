@@ -36,9 +36,18 @@
         transform: scale(1.2);
         opacity: 0.8;
     }
-    #card:hover{
-        
-        
+
+    #about {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #card {
+        border: 5px;
+    }
+
+    #contact{
+        color:white;
     }
 </style>
 
@@ -68,13 +77,13 @@
                         <a class="nav-link" href="#education">Education</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Skills</a>
+                        <a class="nav-link" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Project</a>
+                        <a class="nav-link" href="#project">Project</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -95,10 +104,10 @@
                             Flask.</p>
                         <div class="row justify-content-center jsutify-content-md-start">
                             <div class="col-auto social-icons p-2">
-                                <a href="#"><img src="linkedin_icon.png" alt="linkedin" class="img-fluid"></a>
+                                <a href="https://www.linkedin.com/in/sureshk06/"><img src="linkedin_icon.png" alt="linkedin" class="img-fluid"></a>
                             </div>
                             <div class="col-auto social-icons p-2">
-                                <a href="#"><img src="github1.png" alt="github" class="img-fluid"></a>
+                                <a href="https://github.com/SureshK2004/"><img src="github1.png" alt="github" class="img-fluid"></a>
                             </div>
                             <div class="col-auto social-icons p-2">
                                 <a href="#"><img src="instagram.png" alt="instagram" class="img-fluid"></a>
@@ -111,7 +120,7 @@
                 <div class="col ">
                     <div class="col-md-3 text-center order-1 order-md-2 mt-4 mt-md-0b ms-auto"
                         style="width: 320px;justify-content: center; align-items: center; ">
-                        <img src="profile.jpg" alt="profile pic" class="profile-img img-fluid rounded-circle shadow-lg">
+                        <img src="profile.jpg" alt="profile pic" class="profile-img img-fluid rounded-circle shadow-lg" style="filter: drop-shadow(10px 10px 10px #ce2788);">
                     </div>
                 </div>
             </div>
@@ -120,69 +129,148 @@
     </section>
 
     <!-- About part -->
-     <section class="abt-section">
-    <div class="container" id="about">
-        <div class="row ">
-            <h2 class="abt text-light p-2">About Me</h2>
-            <div class="col">
-                <div class="text-center">
-                    <img src="abt.png" class="img-fluid rounded-circle shadow-lg " alt="about img"
-                    style="height: 300px; justify-content: center;
+    <section class="abt-section">
+        <div class="container" id="about">
+            <div class="row ">
+                <h2 class="abt text-light p-2">About Me</h2>
+                <div class="col">
+                    <div class="text-center">
+                        <img src="abt.png" class="img-fluid rounded-circle shadow-lg " alt="about img" style="height: 300px; justify-content: center;
                     align-items: center;">
+                    </div>
+                </div>
+                <div class="col">
+
+                    <div class="para">
+                        <p class="abt-para text-light mt-3">I am a passionate Python Developer with expertise in
+                            Django, Flask, MySQL, and Web Development. As a fresher, I am eager to apply my knowledge to
+                            build efficient, scalable, and secure applications. I enjoy solving complex problems,
+                            optimizing database queries, and creating user-friendly web solutions.
+
+                            I have worked on projects like Aluminium Pro and Translator Pro, where I gained hands-on
+                            experience in backend development, API integration, and deployment using Netlify and Render.
+                            Additionally, I am developing an e-commerce project using Django to strengthen my skills
+                            further.
+
+                            Currently, I am looking for opportunities as a Junior Python Developer in Chennai, where I
+                            can contribute to innovative projects while continuously learning and growing in the field
+                            of software development.
+                        </p>
+                    </div>
+
                 </div>
             </div>
-            <div class="col">
-                
-                <div class="para">
-                    <p class="abt-para text-light mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, placeat. Iste
-                        quos quidem aspernatur tempora soluta dicta exercitationem sed dolore quasi, unde autem ullam
-                        doloremque quod molestiae doloribus error maiores, alias placeat! Odit earum libero, dolorem et
-                        fugit voluptate aut totam repellat cum vero dicta dolores fuga veniam animi quam officia facere
-                        exercitationem incidunt, nulla, porro unde nesciunt alias laudantium. Saepe expedita, ex esse
-                        eveniet a repudiandae dicta quas mollitia. Odio nam nihil eius adipisci consequuntur saepe
-                        veritatis, aperiam sed amet, optio sit sapiente quod voluptas quo assumenda, voluptate eos. Harum
-                        officiis unde ullam omnis repudiandae nemo mollitia blanditiis in. Debitis dolor fugit mollitia ab
-                         </p>
+
+        </div>
+    </section>
+    <section class="education" id="education">
+        <div class="container mt-4 px-4">
+            <h3 class="text-light mt-5 px-4 " style="text-align: center;">Education</h3>
+            <div class="card mb-3 bg-dark text-light mt-4 border border-danger bg-opacity-10" id="card"
+                style="border-radius: 20px;">
+                <div class="card-body" style="text-align: center; ">
+                    <h5 class="card-title p-1">BCA (Bachelor of Computer Application) 2021-2024</h5>
+                    <p class="card-text p-1">Agurchand Manmull Jain College, Meenambakkam, Chennai.</p>
+                    <a href="#" class="btn btn-danger text-center">Know more</a>
                 </div>
-               
+            </div>
+
+
+            <div class="card mb-3 bg-dark text-light mt-4 border border-danger bg-opacity-10" id="card"
+                style="border-radius: 20px;">
+                <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title ">Python Full-Stack Developer</h5>
+                    <p class="card-text">Besant Technologies Tambaram, Chennai.</p>
+                    <a href="#" class="btn btn-danger text-center">Know more</a>
+                </div>
+            </div>
+
+
+            <div class="card mb-3 bg-dark text-light mt-4 border border-danger bg-opacity-10" id="card"
+                style="border-radius: 20px;">
+                <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title p-1 ">HSC (Higher Secondary School) 2020-2021</h5>
+                    <p class="card-text p-1">Shalom Matriculation Higher Secondary School, Vandalur, Chennai.</p>
+                    <a href="#" class="btn btn-danger text-center">Know more</a>
+                </div>
             </div>
         </div>
+    </section>
 
-    </div>
-</section>
-<section class="education">
-    <div class="container mt-4 px-4">
-        <h3 class="text-light mt-5 px-4 " style="text-align: center;">Education</h3>
-        <div class="card mb-3 bg-dark text-light mt-4" id="card" style="border-radius: 20px;">
-            <div class="card-body" style="text-align: center; ">
-              <h5 class="card-title p-1">BCA (Bachelor of Computer Application) 2021-2024</h5>
-              <p class="card-text p-1">Agurchand Manmull Jain College, Meenambakkam, Chennai.</p>
-              <a href="#" class="btn btn-danger text-center">Know more</a>
-            </div>
-          </div>
+    <!-- Skill-part -->
+    <section class="skill" id="skills">
+        <h3>Full-Stack Development Skills</h3>
+    </section>
 
-          
-        <div class="card mb-3 bg-dark text-light mt-4" id="card" style="border-radius: 20px;">
-            <div class="card-body" style="text-align: center;">
-              <h5 class="card-title ">Python Full-Stack Developer</h5>
-              <p class="card-text">Besant Technologies Tambaram, Chennai.</p>
-              <a href="#" class="btn btn-danger text-center">Know more</a>
-            </div>
-          </div>
 
-          
-        <div class="card mb-3 bg-dark text-light mt-4" id="card" style="border-radius: 20px;">
-            <div class="card-body" style="text-align: center;">
-              <h5 class="card-title p-1 ">HSC (Higher Secondary School) 2020-2021</h5>
-              <p class="card-text p-1">Shalom Matriculation Higher Secondary School, Vandalur, Chennai.</p>
-              <a href="#" class="btn btn-danger text-center">Know more</a>
+    <!-- project-part -->
+    <section class="project" id="project">
+        <div class="container text-light mt-5 p-5">
+            <h3 class="mb-3" style="text-align: center;">Project</h3>
+            <div class="row mt-5">
+                <div class="col-sm-6 mb-5 mb-sm-0 px-5">
+                    <div class="card bg-dark border border-danger">
+                        <div class="card-body">
+                            <h5 class="card-title">Translator-Pro</h5>
+                            <p class="card-text">An AI-powered language translation tool that supports multiple
+                                languages. Developed with Flask and API integration, it offers fast and accurate
+                                translations.</p>
+                            <a href="#" class="btn btn-danger">Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card bg-dark border border-danger">
+                        <div class="card-body">
+                            <h5 class="card-title">Library Management System</h5>
+                            <p class="card-text">A Django-based system to manage books, users, and borrow/return records
+                                efficiently. It includes features like book search, issue tracking, and overdue
+                                alerts.📚🚀</p>
+                            <a href="#" class="btn btn-danger">Demo</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-    </div>
-</section>
- 
-     
-      
+
+            <div class="row mt-5 p-4">
+                <div class="col">
+                    <div class="card bg-dark border border-danger">
+                        <div class="card-body">
+                            <h5 class="card-title">OnceMore - Online Shopping Hub (In Progress)</h5>
+                            <p class="card-text">A Django-based e-commerce platform for online product listings, cart
+                                management, and secure checkout. Designed with HTML, CSS, and Bootstrap, with plans for
+                                full backend integration.
+
+                            </p>
+                            <a href="#" class="btn btn-danger">Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <!-- contact-part -->
+    <section class="contact" id="contact">
+        <div class="container ">
+            <h3 class="text-light mt-5 mb-3" style="text-align: center;">Contact</h3>
+            <div class="form-floating mb-3 ">
+                <input type="text" class="form-control bg-dark border border-danger p-3" id="floatingInput"
+                    placeholde="Enter your Name">
+                <label for="floatingInput" class="text-light">User</label>
+            </div>
+            <div class="form-floating mb-3 ">
+                <input type="email" class="form-control  bg-dark border border-danger p-3" id="floatingInput" placeholder="Enter your Email">
+                <label for="floatingPassword">Email</label>
+            </div>
+            <div class="form-floating">
+                <textarea class="form-control  bg-dark border border-danger p-3" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">Comments</label>
+            </div>
+        </div>
+    </section>
+<!-- footer-part -->
+
 
 
 </body>
