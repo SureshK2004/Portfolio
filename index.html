@@ -12,21 +12,33 @@
 </head>
 <style>
     body {
-       background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+        background-image: linear-gradient(to right, #434343 0%, black 100%);
     }
-    .hero-section{
-        background: #000;
+
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .hero-section {
+        /* background: #000; */
         padding: 100px 0;
     }
-    .social-icons img{
+
+    .social-icons img {
         width: 40px;
         height: 40px;
-        transition: transform 0.3s ease,opaacity 0.3s ease;
-       
+        transition: transform 0.3s ease, opaacity 0.3s ease;
+
     }
-    .social-icons img:hover{
-        transform:scale(1.2);
+
+    .social-icons img:hover {
+        transform: scale(1.2);
         opacity: 0.8;
+    }
+    #card:hover{
+        
+        
     }
 </style>
 
@@ -35,7 +47,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Suresh</a>
+            <a class="navbar-brand" href="#">Portfolio</a>
 
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -47,13 +59,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Project</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -66,38 +84,106 @@
     <!-- body-part -->
     <section class="hero-section text-light" id="home">
         <div class="container">
-           <div class="row">
-            <div class="col ">
-                <div class="col-md-9 order-2 order-md-1 text-center text-md-start m-4">
-                    <h3 class="text-danger mt-3 fw-bold display-7">Hello, I am</h3>
-                    <h3 class="text-white mt-3 fw-bold display-6">Suresh</h3>
-                    <h3 class="text-white mt-3 fw-bold display-7">Python Developer</h3>
-                    <p class="into-text mt-3 fs-5">I specialized in Mysql, Python, HTML, CSS and framworks like Django and
-                        Flask.</p>
-                    <div class="row justify-content-center jsutify-content-md-start">
-                        <div class="col-auto social-icons p-2">
-                            <a href="#"><img src="linkedin_icon.png" alt="linkedin" class="img-fluid"></a>
+            <div class="row">
+                <div class="col ">
+                    <div class="col-md-9 order-2 order-md-1 text-center text-md-start m-4">
+                        <h3 class="text-danger mt-3 fw-bold display-7">Hello, I am</h3>
+                        <h3 class="text-white mt-3 fw-bold display-6">Suresh</h3>
+                        <h3 class="text-white mt-3 fw-bold display-7">Python Developer</h3>
+                        <p class="into-text mt-3 fs-5">I specialized in Mysql, Python, HTML, CSS and framworks like
+                            Django and
+                            Flask.</p>
+                        <div class="row justify-content-center jsutify-content-md-start">
+                            <div class="col-auto social-icons p-2">
+                                <a href="#"><img src="linkedin_icon.png" alt="linkedin" class="img-fluid"></a>
+                            </div>
+                            <div class="col-auto social-icons p-2">
+                                <a href="#"><img src="github1.png" alt="github" class="img-fluid"></a>
+                            </div>
+                            <div class="col-auto social-icons p-2">
+                                <a href="#"><img src="instagram.png" alt="instagram" class="img-fluid"></a>
+                            </div>
                         </div>
-                        <div class="col-auto social-icons p-2">
-                            <a href="#"><img src="github1.png" alt="github" class="img-fluid"></a>
-                        </div>
-                        <div class="col-auto social-icons p-2">
-                            <a href="#"><img src="instagram.png" alt="instagram" class="img-fluid"></a>
-                        </div>
+                        <a href=""
+                            class="btn btn-danger mt-4 px-4 py-3 rounded-pill shadow-lg text-white fw-bold transition-transform transform hover:scale-105">DownloadCV</a>
                     </div>
-                    <a href=""
-                        class="btn btn-danger mt-4 px-4 py-3 rounded-pill shadow-lg text-white fw-bold transition-transform transform hover:scale-105">DownloadCV</a>
+                </div>
+                <div class="col ">
+                    <div class="col-md-3 text-center order-1 order-md-2 mt-4 mt-md-0b ms-auto"
+                        style="width: 320px;justify-content: center; align-items: center; ">
+                        <img src="profile.jpg" alt="profile pic" class="profile-img img-fluid rounded-circle shadow-lg">
+                    </div>
                 </div>
             </div>
-            <div class="col ">
-                <div class="col-md-3 text-center order-1 order-md-2 mt-4 mt-md-0b ms-auto" style="width: 320px;justify-content: center; align-items: center; ">
-                    <img src="profile.jpg" alt="profile pic" class="profile-img img-fluid rounded-circle shadow-lg">
-                </div>
-            </div>
-           </div>
-            
+
         </div>
     </section>
+
+    <!-- About part -->
+     <section class="abt-section">
+    <div class="container" id="about">
+        <div class="row ">
+            <h2 class="abt text-light p-2">About Me</h2>
+            <div class="col">
+                <div class="text-center">
+                    <img src="abt.png" class="img-fluid rounded-circle shadow-lg " alt="about img"
+                    style="height: 300px; justify-content: center;
+                    align-items: center;">
+                </div>
+            </div>
+            <div class="col">
+                
+                <div class="para">
+                    <p class="abt-para text-light mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, placeat. Iste
+                        quos quidem aspernatur tempora soluta dicta exercitationem sed dolore quasi, unde autem ullam
+                        doloremque quod molestiae doloribus error maiores, alias placeat! Odit earum libero, dolorem et
+                        fugit voluptate aut totam repellat cum vero dicta dolores fuga veniam animi quam officia facere
+                        exercitationem incidunt, nulla, porro unde nesciunt alias laudantium. Saepe expedita, ex esse
+                        eveniet a repudiandae dicta quas mollitia. Odio nam nihil eius adipisci consequuntur saepe
+                        veritatis, aperiam sed amet, optio sit sapiente quod voluptas quo assumenda, voluptate eos. Harum
+                        officiis unde ullam omnis repudiandae nemo mollitia blanditiis in. Debitis dolor fugit mollitia ab
+                         </p>
+                </div>
+               
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="education">
+    <div class="container mt-4 px-4">
+        <h3 class="text-light mt-5 px-4 " style="text-align: center;">Education</h3>
+        <div class="card mb-3 bg-dark text-light mt-4" id="card" style="border-radius: 20px;">
+            <div class="card-body" style="text-align: center; ">
+              <h5 class="card-title p-1">BCA (Bachelor of Computer Application) 2021-2024</h5>
+              <p class="card-text p-1">Agurchand Manmull Jain College, Meenambakkam, Chennai.</p>
+              <a href="#" class="btn btn-danger text-center">Know more</a>
+            </div>
+          </div>
+
+          
+        <div class="card mb-3 bg-dark text-light mt-4" id="card" style="border-radius: 20px;">
+            <div class="card-body" style="text-align: center;">
+              <h5 class="card-title ">Python Full-Stack Developer</h5>
+              <p class="card-text">Besant Technologies Tambaram, Chennai.</p>
+              <a href="#" class="btn btn-danger text-center">Know more</a>
+            </div>
+          </div>
+
+          
+        <div class="card mb-3 bg-dark text-light mt-4" id="card" style="border-radius: 20px;">
+            <div class="card-body" style="text-align: center;">
+              <h5 class="card-title p-1 ">HSC (Higher Secondary School) 2020-2021</h5>
+              <p class="card-text p-1">Shalom Matriculation Higher Secondary School, Vandalur, Chennai.</p>
+              <a href="#" class="btn btn-danger text-center">Know more</a>
+            </div>
+          </div>
+    </div>
+</section>
+ 
+     
+      
+
 
 </body>
 
