@@ -55,7 +55,9 @@
         color: white;
         background-image: linear-gradient(to right, #434343 0%, black 100%);
     }
-
+   #floatingInput{
+    color: white;
+   }
     #footer {
         background-color: #434343;
         height: auto;
@@ -154,9 +156,9 @@
     <section class="abt-section">
         <div class="container" id="about">
             <div class="row ">
-                <h2 class="abt text-light p-2">About Me</h2>
+                <h2 class="abt text-light p-2  mb-5 text-center">About Me</h2>
                 <div class="col">
-                    <div class="text-center">
+                    <div class="text-center mt-3 mb-5">
                         <img src="abt.png" class="img-fluid rounded-circle shadow-lg " alt="about img" style="height: 300px; justify-content: center;
                     align-items: center;">
                     </div>
@@ -164,7 +166,7 @@
                 <div class="col">
 
                     <div class="para">
-                        <p class="abt-para text-light mt-3">I am a passionate Python Developer with expertise in
+                        <p class="abt-para text-light mt-4">I am a passionate Python Developer with expertise in
                             Django, Flask, MySQL, and Web Development. As a fresher, I am eager to apply my knowledge to
                             build efficient, scalable, and secure applications. I enjoy solving complex problems,
                             optimizing database queries, and creating user-friendly web solutions.
@@ -193,7 +195,7 @@
                 <div class="card-body" style="text-align: center; ">
                     <h5 class="card-title p-1">BCA (Bachelor of Computer Application) 2021-2024</h5>
                     <p class="card-text p-1">Agurchand Manmull Jain College, Meenambakkam, Chennai.</p>
-                    <a href="#" class="btn btn-danger text-center">Know more</a>
+                    <a href="#" class="btn btn-danger text-center" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Know more</a>
                 </div>
             </div>
 
@@ -237,7 +239,7 @@
                             <p class="card-text">An AI-powered language translation tool that supports multiple
                                 languages. Developed with Flask and API integration, it offers fast and accurate
                                 translations.</p>
-                            <a href="#" class="btn btn-danger">Demo</a>
+                            <a href="https://translator-pro.onrender.com" class="btn btn-danger">Demo</a>
                         </div>
                     </div>
                 </div>
@@ -248,7 +250,7 @@
                             <p class="card-text">A Django-based system to manage books, users, and borrow/return records
                                 efficiently. It includes features like book search, issue tracking, and overdue
                                 alerts.📚🚀</p>
-                            <a href="#" class="btn btn-danger">Demo</a>
+                            <a href="https://github.com/SureshK2004/Suresh-LMS" class="btn btn-danger">Demo</a>
                         </div>
                     </div>
                 </div>
@@ -264,7 +266,7 @@
                                 full backend integration.
 
                             </p>
-                            <a href="#" class="btn btn-danger">Demo</a>
+                            <a href="https://github.com/SureshK2004/oncemore-ecommerce" class="btn btn-danger">Demo</a>
                         </div>
                     </div>
                 </div>
@@ -275,20 +277,36 @@
     <!-- contact-part -->
     <section class="contact mb-5" id="contact">
         <div class="container ">
-            <h3 class="text-light mt-5 mb-3" style="text-align: center;">Contact</h3>
-            <div class="form-floating mb-3 ">
-                <input type="text" class="form-control bg-dark border border-danger p-3" id="floatingInput"
-                    placeholde="Enter your Name">
-                <label for="floatingInput" class="text-light">User</label>
+            <h3 class="text-light mt-5 mb-5 " style="text-align: center;">Contact</h3>
+           <div class="row">
+            <div class="col">
+                <div class="form-floating mb-3 ">
+                    <input type="text" class="form-control border border-danger p-3 bg-dark" id="floatingInput"
+                        placeholde="Enter your First Name">
+                    <label for="floatingInput" class=" py-1 mt-2">First Name</label>
+                </div>
             </div>
+
+            <div class="col">
+                <div class="form-floating mb-3 ">
+                    <input type="text" class="form-control  border border-danger p-3 bg-dark" id="floatingInput"
+                        placeholde="Enter your Last Name">
+                    <label for="floatingInput" class="py-1 mt-2">Last Name</label>
+                </div>
+            </div>
+
+           </div>
             <div class="form-floating mb-3 ">
                 <input type="email" class="form-control  bg-dark border border-danger p-3" id="floatingInput" placeholder="Enter your Email">
-                <label for="floatingPassword">Email</label>
+                <label for="floatingPassword" >Email</label>
             </div>
             <div class="form-floating">
                 <textarea class="form-control  bg-dark border border-danger p-3" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                <label for="floatingTextarea">Comments</label>
+                <label for="floatingTextarea">Write a Message</label>
             </div>
+            <div class="d-flex justify-content-center">
+            <button class="btn btn-danger mt-4 px-3 py-3 bg-dark text-white fw-bold rounded-4 hire-btn" type="submit" >Submit</button>
+        </div>
         </div>
     </section>
     <!-- footer-part -->
@@ -311,9 +329,12 @@
                 </div>
                 <div class="row justify-content-center justify-content-md-center">
                     <h2 class="text-light mt-2 text-center">Let's Talk</h2>
-                    <button class="btn btn-danger mt-4 px-4 py-3 bg-dark rounded-pill text-white fw-bold hire-btn" style="width: 15%;">Hire Me</button>
+
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-danger mt-4 px-4 py-3 bg-dark rounded-5 text-white fw-bold hire-btn mb-3">Hire Me</button>
                 </div>
-                <hr style="background-color: #afa9a9;">
+                </div>
+                <hr style="background-color:rgb(224, 218, 218);">
                 <div class="row mb-0 ">
                     <p class="text-light text-center mt-3">sureshksureshk04@gmail.com | 6379991294</p>
                     <p class="text-light text-center"> &copy; 2025 Suresh. All Rights Reserved. </p>
@@ -322,9 +343,22 @@
             </div>
         </div>
 
-
-
     </section>
+
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Provisional Certificate</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="provisional.jpeg" alt="Certificate" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
 </body>
 
