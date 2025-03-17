@@ -14,7 +14,29 @@
 <style>
     body {
         background-image: linear-gradient(to right, #434343 0%, black 100%);
-        
+        overflow-x: hidden;
+    }
+    ::-webkit-scrollbar{
+        width: 5px;
+        background: transparent;
+    }
+    ::-webkit-scrollbar-thumb{
+       background-color: #dc3545;
+       border-radius: 4px;
+    }
+    section{
+        animation: autoShow both;
+        animation-timeline: view(60% 30%);
+    }
+    @keyframes autoShow{
+        from{
+            opacity: 0;
+            transform: translateY(200px) scale(0.3);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
     }
 
     .navbar-brand {
@@ -76,10 +98,32 @@
       transition: transform 0.3s ease;
       box-shadow: 0 4px 8px rgba(141, 136, 136, 0.2); 
     }
-    @media (max-widht:480px){
-        .profile-img{
-            align-items: center;
+    /*Responsive*/
+    @media (min-width: 0px) and (max-width: 768px) {
+        .hero-section .container .row{
+            flex-direction: column;
+        }
+        .hero-section .container .row .col .img-box{
+            width: 220px !important;
+        }
+        .hero-section .container .row .col .row{
+            flex-direction: row;
             justify-content: center;
+        }
+        .abt-section .container .row{
+            flex-direction: column;
+        }
+        .abt-section .container .row .col .about-img{
+            width: 250px !important;
+            height: 200px !important;
+        }
+        .abt-section .container .row .col .para{
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .project .container .row .px-5{
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
         }
     }
 </style>
@@ -125,20 +169,18 @@
 </div>
 
     <!-- body-part -->
-    <section class="hero-section text-light" id="home">
-        <div class="container">
+    <section class="hero-section text-light" id="home" style="height: 700px;">
+        <div class="container autoShow">
             <div class="row">
-                <div class="col ">
+                <div class="col order-2 order-md-1">
                     <div class="col-md-9 order-2 order-md-1 text-center text-md-start m-4">
                         <h3 class="text-danger mt-3 fw-bold display-7">Hello, I am</h3>
                         <h3 class="text-white mt-3 fw-bold display-6">Suresh</h3>
-                        <h3 class="text-white mt-3 fw-bold display-7 ">
-                        Python Developer  
-                        </h3>
+                        <h3 class="text-white mt-3 fw-bold display-7">Python Developer</h3>
                         <p class="into-text mt-3 fs-5">I specialized in Mysql, Python, HTML, CSS and framworks like
                             Django and
                             Flask.</p>
-                        <div class="row justify-content-center jsutify-content-md-start">
+                        <div class="row ">
                             <div class="col-auto social-icons p-2">
                                 <a href="https://www.linkedin.com/in/sureshk06/" target="_blank"><img src="./assert/linkedin_icon.png"
                                         alt="linkedin" class="img-fluid"></a>
@@ -155,8 +197,8 @@
                             class="btn btn-danger mt-4 px-4 py-3 rounded-pill shadow-lg text-white fw-bold transition-transform transform hover:scale-105">Download CV</a>
                     </div>
                 </div>
-                <div class="col ">
-                    <div class="col-md-3 text-center order-1 order-md-2 mt-4 mt-md-0b ms-auto"
+                <div class="col order-1 order-md-2 d-flex justify-content-center">
+                    <div class="col-md-3 text-center mt-4 mt-md-0b img-box"
                         style="width: 320px;justify-content: center; align-items: center; ">
                         <img src="./assert/profile.jpg" alt="profile pic" class="profile-img img-fluid rounded-circle shadow-lg"
                             style="filter: drop-shadow(10px 10px 10px #dc3545);"> 
@@ -168,13 +210,13 @@
     </section>
 
     <!-- About part -->
-    <section class="abt-section">
-        <div class="container" id="about">
+    <section class="abt-section" id="about" style="height: 700px;">
+        <div class="container autoShow" >
+            <h2 class="abt text-light p-2  mb-5 text-center">About Me</h2>
             <div class="row ">
-                <h2 class="abt text-light p-2  mb-5 text-center">About Me</h2>
-                <div class="col">
+                <div class="col d-flex justify-content-center align-items-center">
                     <div class="text-center mt-3 mb-5">
-                        <img src="./assert/abt.png" class="img-fluid rounded-circle shadow-lg " alt="about img" style="height: 300px; justify-content: center;
+                        <img src="./assert/abt.png" class="img-fluid rounded-circle shadow-lg about-img" alt="about img" style="height: 300px; justify-content: center;
                     align-items: center;">
                     </div>
                 </div>
@@ -203,7 +245,7 @@
         </div>
     </section>
     <section class="education" id="education">
-        <div class="container mt-4 px-4">
+        <div class="container autoShow mt-4 px-4">
             <h3 class="text-light mt-5 px-4 " style="text-align: center;">Education</h3>
             <div class="card mb-3 bg-dark text-light mt-4 border border-danger bg-opacity-10" id="card"
                 style="border-radius: 20px;">
@@ -237,9 +279,9 @@
     </section>
 
     <!-- Skill-part -->
-    <section class="skill" id="skills">
+    <section class="skill" id="skills" style="height: 700px;">
         
-        <div class="container my-5">
+        <div class="container autoShow my-5">
             <h2 class="text-center mb-4 text-white">Skills</h2> 
             <div class="row justify-content-center"> 
                 <h3 class="text-white text-center mb-4">Frontend</h3>
@@ -337,11 +379,11 @@
 
 
     <!-- project-part -->
-    <section class="project" id="project">
-        <div class="container text-light mt-5 p-5">
+    <section class="project" id="project" style="height: 700px;">
+        <div class="container autoShow text-light mt-5 p-5">
             <h3 class="mb-3" style="text-align: center;">Project</h3>
             <div class="row mt-5">
-                <div class="col-sm-6 mb-5 mb-sm-0 px-5">
+                <div class="col-sm-6 mb-5 px-5">
                     <div class="card bg-dark border border-danger" id="card">
                         <div class="card-body">
                             <h5 class="card-title">Translator-Pro</h5>
@@ -383,8 +425,8 @@
             </div>
     </section>
 
-    <section class="services">
-        <div class="container">
+    <section class="services" >
+        <div class="container autoShow">
             <h2 class="text-white text-center mb-3">Internships</h2>
             <div class="row d-flex justify-content-center">
                 <div class="col-md-6 col-lg-4 d-flex justify-content-center p-4">
@@ -414,45 +456,45 @@
     
 
     <!-- contact-part -->
-    <section class="contact mb-5" id="contact">
-        <div class="container ">
-            <h3 class="text-light mt-5 mb-5 " style="text-align: center;">Contact</h3>
-           <div class="row">
-            <div class="col">
-                <div class="form-floating mb-3 ">
-                    <input type="text" class="form-control border border-danger p-3 bg-dark" id="floatingInput"
-                        placeholde="Enter your First Name">
-                    <label for="floatingInput" class=" py-2 mt-2">First Name</label>
+    <section class="contact mb-5" id="contact" style="height: 700px;">
+        <div class="container autoShow">
+            <h3 class="text-light mt-5 mb-5 text-center">Contact</h3>
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control border border-danger text-white bg-dark" id="firstName"
+                            placeholder="Enter your First Name">
+                        <label for="firstName" class="py-2">First Name</label>
+                    </div>
+                </div>
+    
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control border border-danger text-white bg-dark" id="lastName"
+                            placeholder="Enter your Last Name">
+                        <label for="lastName" class="py-2">Last Name</label>
+                    </div>
                 </div>
             </div>
-
-            <div class="col">
-                <div class="form-floating mb-3 ">
-                    <input type="text" class="form-control  border border-danger p-3 bg-dark" id="floatingInput"
-                        placeholde="Enter your Last Name">
-                    <label for="floatingInput" class="py-2 mt-2">Last Name</label>
-                </div>
-            </div>
-
-           </div>
-            <div class="form-floating mb-3 ">
-                <input type="email" class="form-control  bg-dark border border-danger p-3" id="floatingInput" placeholder="Enter your Email">
-                <label for="floatingPassword" >Email</label>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control bg-dark border text-white border-danger" id="email" placeholder="Enter your Email">
+                <label for="email">Email</label>
             </div>
             <div class="form-floating">
-                <textarea class="form-control  bg-dark border border-danger p-3" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                <label for="floatingTextarea">Write a Message</label>
+                <textarea class="form-control bg-dark border border-danger text-white" placeholder="Leave a comment here" id="message"></textarea>
+                <label for="message">Write a Message</label>
             </div>
             <div class="d-flex justify-content-center">
-            <button class="btn btn-danger mt-4 px-3 py-3 bg-dark text-white fw-bold rounded-4 hire-btn" type="submit" >Submit</button>
-        </div>
+                <button class="btn btn-danger mt-4 px-3 py-3 bg-dark text-white fw-bold rounded-4 hire-btn" type="submit">Submit</button>
+            </div>
         </div>
     </section>
+    
     <!-- footer-part -->
 
-    <section class="footer">
+    <footer class="footer">
         <div class="card1 bg-dark footer-dark mt-5" id="footer">
-            <div class="row">
+            <div class="row gx-0">
                 <div class="row justify-content-center justify-content-md-center mt-3">
                     <div class="col-auto social-icons py-3">
                         <a href="https://www.linkedin.com/in/sureshk06/"><img src="./assert/linkedin_icon.png" alt="linkedin"
@@ -482,7 +524,7 @@
             </div>
         </div>
 
-    </section>
+    </footer>
 
     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
@@ -506,23 +548,13 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
-                    <img src="./assert/hsc.jpeg" alt="Certificate" class="img-fluid" style="height: 530px;">
+                    <img src="./assert/hsc.jpeg" alt="Certificate" class="img-fluid">
                 </div>
             </div>
         </div>
     </div>
     
 
-
-
 </body>
-<script>
-      var typed= new Typed(".auto-type",{
-        strings:["Python Developer","Web Designer","Backend Developer"],
-        typeSpeed:160,
-        backSpeed:170,
-        loop:true
-    })
-</script>
 
 </html>
